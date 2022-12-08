@@ -1,4 +1,6 @@
-document.querySelector("container").onmouseover=function(){
-    document.querySelector("#image1").src="images/image1_2.jpg";
-    document.querySelector("#image2").src=""
-}
+const images = document.querySelectorAll("img")
+images.forEach( function(e){
+    e.addEventListener("mouseover", function(e) {
+        e.target.src = `images/${e.target.id}_2.jpg`
+    })
+})
